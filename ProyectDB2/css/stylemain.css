@@ -97,6 +97,7 @@ header{
 
 .options__menu a:hover{
     color: #ffffb2;
+    
 }
 
 .options__menu .option{
@@ -117,11 +118,11 @@ header{
     cursor: pointer;
 }
 
-a.selected{
+a.selected:hover{
     color: #fff;
 }
 
-.selected:before{
+.selected::before{
     content: '';
     width: 3px;
     height: 80%;

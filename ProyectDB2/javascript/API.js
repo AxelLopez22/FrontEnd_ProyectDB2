@@ -1,20 +1,22 @@
-const API_Url = `C:\Users\Jarvin\Desktop\API Prueba\backend_system_magbussines\WebAPIProyectBDTest\WebAPIProyectBDTest.sln`;
+const API_Url = 'https://localhost:44309';
 
-//const HTMLResponse = document.querySelector("#app");
+const HTMLResponse = document.querySelector("#app");
+//const tpl;
 
-const xhr = new XMLHttpRequest();
+//metodo GET para obtener personas
+fetch(`${API_Url}/api/person`)
+.then((response) => response.json())
+.then((data) => {
+    console.log(data);
+    HTMLResponse.innerHTML = data;
+})
 
-async function onRequestHandler(){
-    if (this.readyState == 4 && this.status == 200) {
+//metodo DELETE para eliminar personas
 
-        const data = await JSON.parse(this.response);
-        console.log(data);
-        //const HTMLResponse = document.querySelector("#app");
-        //const User = data.map((user) => `<li>${user.name} @${user.email}</li>`);
-        //HTMLResponse.innerHTML = `<ul>${User}</ul>`
-    }
-}
 
-xhr.addEventListener("load", onRequestHandler);
-xhr.open("httpGet", `${API_Url}/api/[controller]`);
+
+
+
+
+
 
