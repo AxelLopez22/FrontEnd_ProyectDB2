@@ -20,17 +20,16 @@
     <div class="container" id="container">
         <div class="form-container sing-up-container">
             <form action="#">
-                <h1>Ingresar con email</h1>
-                <div class="social-container">
-                    <a href="#" class="social-1"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social-2"><i class="fab fa-google-plus-g"></i></a>
-                    <a href="#" class="social-3"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-                <span>Ingresar con email</span>
+                <h1>Registrarme con email</h1>
+                
                 <input type="text" placeholder="Nombre">
                 <input type="email" placeholder="email">
                 <input type="password" placeholder="Contraseña">
-                <button >Ingresar</button>
+                <a href="#" ><button class="Enviar_email" onclick="CodigoValid()">Enviar</button></a>
+                <div id="Verificacion">
+                    <input type="text" placeholder="Codigo de verificación">
+                    <a href="#" ><button class="Valid">Verificar</button></a>
+                </div>
             </form>
         </div>
         <div class="form-container sing-in-container">
@@ -49,8 +48,10 @@
         <div class="overlay-container">
             <div class="overlay">
                 <div class="overlay-panel overlay-left">
-                    <h1>Gracias por formar parte de nuestro equipo</h1>
-                    <p>Te damos la bienvenida a nuestra compañia</p>
+                    <h1>Bienvenido...!!!</h1>
+                    <p>Se le enviara un código a la dirección que ingreso, ingrese ese código de verificación
+                        para completar su registro
+                    </p>
                     <button class="press" id="signIn">Regresar</button>
                 </div>
                 <div class="overlay-panel overlay-right">

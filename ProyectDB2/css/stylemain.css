@@ -118,11 +118,8 @@ header{
     cursor: pointer;
 }
 
-a.selected:hover{
-    color: #fff;
-}
-
-.selected::before{
+#Selected:before{
+    display: none;
     content: '';
     width: 3px;
     height: 80%;

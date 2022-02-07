@@ -9,3 +9,7 @@ singUpButton.addEventListener('click',() => {
 singInButton.addEventListener('click',() => {
     container.classList.remove("right-panel-active");
 });
+
+function CodigoValid() {
+    document.getElementById('Verificacion').style.display = 'block';
+}

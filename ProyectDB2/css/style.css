@@ -105,6 +105,19 @@ button{
     text-transform: uppercase;
 }
 
+#Verificacion{
+    display: none;
+}
+
+button.Valid{
+    padding: 10px 10px;
+    font-weight: bold;   
+}
+
+button.Enviar_email{
+    padding: 10px 20px;
+}
+
 .sing-in-container{
     left: 0;
     width: 50%;

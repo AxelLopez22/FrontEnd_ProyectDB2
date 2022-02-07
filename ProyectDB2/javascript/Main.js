@@ -26,3 +26,19 @@ window.addEventListener("resize", function(){
     }
 });
 */
+
+function SelectInicio() {
+    document.getElementById('Selected').style.display = 'block';
+}
+
+console.log(document.getElementById('Selected'));
+
+
+
+
+$(document).ready(function() {
+    $('.Usuarios').click(function() {
+    $('.content').load('user.html');
+                            });
+
+});
