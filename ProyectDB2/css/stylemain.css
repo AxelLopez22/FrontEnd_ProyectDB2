@@ -118,8 +118,9 @@ header{
     cursor: pointer;
 }
 
-#Selected:before{
-    display: none;
+
+
+.Selected::before{
     content: '';
     width: 3px;
     height: 80%;

@@ -37,8 +37,12 @@ console.log(document.getElementById('Selected'));
 
 
 $(document).ready(function() {
-    $('.Usuarios').click(function() {
-    $('.content').load('user.html');
-                            });
+   $('div.options__menu a:first').addClass('Selected');
+   $('main').hide();
+   $('main div#User').show();
 
+   $('div.options__menu a').click(function() {
+       $('div.options__menu a').removeClass('Selected');
+       $(this).addClass('Selected');
+   })
 });
