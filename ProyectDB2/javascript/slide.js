@@ -1,3 +1,8 @@
+
+function CodigoValid() {
+    document.getElementById('Verificacion').style.display = 'block';
+}
+
 const singUpButton = document.getElementById("signUp");
 const singInButton = document.getElementById("signIn");
 const container = document.getElementById("container");
@@ -9,7 +14,3 @@ singUpButton.addEventListener('click',() => {
 singInButton.addEventListener('click',() => {
     container.classList.remove("right-panel-active");
 });
-
-function CodigoValid() {
-    document.getElementById('Verificacion').style.display = 'block';
-}

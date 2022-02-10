@@ -27,22 +27,18 @@ window.addEventListener("resize", function(){
 });
 */
 
-function SelectInicio() {
-    document.getElementById('Selected').style.display = 'block';
-}
-
-console.log(document.getElementById('Selected'));
-
-
-
-
 $(document).ready(function() {
    $('div.options__menu a:first').addClass('Selected');
-   $('main').hide();
-   $('main div#User').show();
+   $('.content div').hide();
+   $('.content div.Inicio').show();
 
    $('div.options__menu a').click(function() {
        $('div.options__menu a').removeClass('Selected');
        $(this).addClass('Selected');
-   })
+       $('.content div').hide();
+
+       let OptionSelect = $(this).attr('href');
+       $(OptionSelect).show();
+       return false;
+   });
 });
