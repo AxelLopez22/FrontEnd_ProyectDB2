@@ -109,6 +109,16 @@ button{
     display: none;
 }
 
+.warning{
+    width: 250px;
+    text-align: center;
+    margin: 0%;
+    color: red;
+    padding-top: 4px;
+    font-size: 5;
+    display: none;
+}
+
 button.Valid{
     padding: 10px 10px;
     font-weight: bold;   

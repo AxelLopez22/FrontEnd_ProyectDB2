@@ -19,13 +19,14 @@
     <div id="particles-js"></div>
     <div class="container" id="container">
         <div class="form-container sing-up-container">
-            <form action="#">
+            <form action="#" id="fromRegister">
                 <h1>Registrarme con email</h1>
                 
-                <input type="text" placeholder="Nombre">
-                <input type="email" placeholder="email">
-                <input type="password" placeholder="Contraseña">
-                <a href="#" ><button class="Enviar_email" onclick="CodigoValid()">Enviar</button></a>
+                <input id="NameUser" type="text" placeholder="Nombre Usuario">
+                <input id="email" type="email" placeholder="email">
+                <input id="Pass" type="password" placeholder="Contraseña">
+                <button type="submit" class="Enviar_email" onclick="CodigoValid()">Enviar</button>
+                <p class="warning" id="warning"></p>
                 <div id="Verificacion">
                     <input type="text" placeholder="Codigo de verificación">
                     <a href="#" ><button class="Valid">Verificar</button></a>
@@ -52,7 +53,12 @@
                     <p>Se le enviara un código a la dirección que ingreso, ingrese ese código de verificación
                         para completar su registro
                     </p>
-                    <button class="press" id="signIn">Regresar</button>
+                    <p>
+                        El nombre de usuario debe ser mayor a 5 caracteres
+                        Debe ser email Valido
+                        La contraseña debe ser mayor a 6 caracteres
+                    </p>
+                    <button class="press" id="signIn" onclick="NoneStyle()">Regresar</button>
                 </div>
                 <div class="overlay-panel overlay-right">
                     <h1>¿Ingresar con Email?</h1>
@@ -63,6 +69,20 @@
         </div>
     </div>
     
+    <script>
+        const singUpButton = document.getElementById("signUp");
+        const singInButton = document.getElementById("signIn");
+        const container = document.getElementById("container");
+
+        singUpButton.addEventListener('click',() => {
+            container.classList.add("right-panel-active");
+        });
+
+        singInButton.addEventListener('click',() => {
+            container.classList.remove("right-panel-active");
+        });
+    </script>
+    <script src="javascript/ValidationUser.js" type="text/javascript"></script>
     <script src="javascript/slide.js" type="text/javascript"></script>
     <script src="javascript/particles.min.js"></script>
     <script src="javascript/particlesjs-config.json"></script>

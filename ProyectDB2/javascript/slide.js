@@ -1,16 +1,12 @@
 
+
 function CodigoValid() {
     document.getElementById('Verificacion').style.display = 'block';
 }
 
-const singUpButton = document.getElementById("signUp");
-const singInButton = document.getElementById("signIn");
-const container = document.getElementById("container");
+function NoneStyle() {
+    document.getElementById('Verificacion').style.display = 'none';
+    document.getElementById('warning').style.display = 'none';
+    fromRegister.reset();
+}
 
-singUpButton.addEventListener('click',() => {
-    container.classList.add("right-panel-active");
-});
-
-singInButton.addEventListener('click',() => {
-    container.classList.remove("right-panel-active");
-});
