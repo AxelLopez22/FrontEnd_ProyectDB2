@@ -53,11 +53,9 @@
                     <p>Se le enviara un código a la dirección que ingreso, ingrese ese código de verificación
                         para completar su registro
                     </p>
-                    <p>
-                        El nombre de usuario debe ser mayor a 5 caracteres
-                        Debe ser email Valido
-                        La contraseña debe ser mayor a 6 caracteres
-                    </p>
+                    <p class="Parrafo">El nombre de usuario debe ser mayor a 5 caracteres</p>
+                    <p class="Parrafo">El email debe ser valido</p>
+                    <p class="Parrafo">La contraseña debe ser mayor a 6 caracteres</p>
                     <button class="press" id="signIn" onclick="NoneStyle()">Regresar</button>
                 </div>
                 <div class="overlay-panel overlay-right">
@@ -73,15 +71,15 @@
         const singUpButton = document.getElementById("signUp");
         const singInButton = document.getElementById("signIn");
         const container = document.getElementById("container");
-
         singUpButton.addEventListener('click',() => {
             container.classList.add("right-panel-active");
         });
-
         singInButton.addEventListener('click',() => {
             container.classList.remove("right-panel-active");
         });
     </script>
+
+    <script src="javascript/login.js"></script>
     <script src="javascript/ValidationUser.js" type="text/javascript"></script>
     <script src="javascript/slide.js" type="text/javascript"></script>
     <script src="javascript/particles.min.js"></script>

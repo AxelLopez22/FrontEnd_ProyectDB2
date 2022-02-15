@@ -119,6 +119,12 @@ button{
     display: none;
 }
 
+.Parrafo{
+    width: 500px;
+    text-align: center;
+    margin: 0%;
+}
+
 button.Valid{
     padding: 10px 10px;
     font-weight: bold;   
@@ -146,8 +152,7 @@ button.Enviar_email{
 }
 
 .overlay{
-    background-color: darkgray;
-    background: linear-gradient(to right,darkgrey,darkgray);
+    background-color: #2F323A;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0 0;
@@ -188,6 +193,7 @@ button:active{
 }
 
 button.press{
+    margin-top: 20px;
     background-color: transparent;
     border-color: #ffffff;
 }

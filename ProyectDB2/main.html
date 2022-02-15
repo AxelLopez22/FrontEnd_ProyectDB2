@@ -7,63 +7,71 @@
     <title>Inicio</title>
     <link rel="stylesheet" href="css/stylemain.css">
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
     
 </head>
-<body id="body">
+<body>
     
 <!---Menu lateral-->
-    <div class="menu__side" id="menu_side">
-        <div class="icon_menu">
-            <i class="fas fa-bars" id="btn_open"></i>
+    <div class="wrapper">
+
+        <div class="header">
+            <div class="header_menu">
+                <div class="title">Pokemones <span>Programando</span></div>
+                <div class="sidebar-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
         </div>
 
-        <div class="options__menu"> 
-            <a href="#Beginning">
-                <div class="option">
-                    <i class="fas fa-home" title="Inicio"></i>
-                    <h4>Inicio</h4>
-                </div>
-            </a>
-            <a href="#Accouting">
-                <div class="option">
-                    <i class="fas fa-archive" title="Contabilidad"></i>
-                    <h4>Contabilidad</h4>
-                </div>
-            </a>
-            <a href="#Catalog">
-                <div class="option">
-                    <i class="fas fa-clipboard" title="Catálogo"></i>
-                    <h4>Catálogo</h4>
-                </div>
-            </a>
-            <a href="#Inventory">
-                <div class="option">
-                    <i class="fas fa-boxes" title="Inventario"></i>
-                    <h4>Inventario</h4>
-                </div>
-            </a>
-            <a href="#Dash">
-                <div class="option">
-                    <i class="fas fa-chart-bar" title="Dashboard"></i>
-                    <h4>Dashboard</h4>
-                </div>
-            </a>
-            <a href="#User">
-                <div class="option">
-                    <i class="fas fa-users" title="Usuarios"></i>
-                    <h4>Usuarios</h4>
-                </div>
-            </a>
-            <a href="#Config">
-                <div class="option">
-                    <i class="fas fa-cog" title="Configuración"></i>
-                    <h4>Configuración</h4>
-                </div>
-            </a>
+        <div class="sidebar">
+            <div class="sidebar-menu">
+                <li class="item">
+                    <a href="#" class="menu-btn"><i class="fas fa-home"></i><span>Inicio</span></a>
+                </li>
+                <li class="item">
+                    <a href="#" class="menu-btn">
+                        <i class="fas fa-boxes"></i><span>Inventario <i class="fas fa-chevron-down dropdown"></i></span>
+                    </a>
+                    <div class="submenu">
+                        <a href="#"><i class="fas fa-desktop"></i><span>Categoria</span></a>
+                        <a href="#"><i class="fas fa-desktop"></i><span>Marca</span></a>
+                        <a href="#"><i class="fas fa-desktop"></i><span>Modelo</span></a>
+                        <a href="#"><i class="fas fa-desktop"></i><span>Tipo de medida</span></a>
+                        <a href="#"><i class="fas fa-desktop"></i><span>Unidad de medida</span></a>
+                        <a href="#"><i class="fas fa-desktop"></i><span>Base de elementos</span></a>
+                        <a href="#"><i class="fas fa-desktop"></i><span>Item</span></a>
+                        <a href="#"><i class="fas fa-desktop"></i><span>Atributos</span></a>
+                        <a href="#"><i class="fas fa-desktop"></i><span>Articulos en series</span></a>
+                        <a href="#"><i class="fas fa-desktop"></i><span>Lote de articulos</span></a>
+                        <a href="#"><i class="fas fa-desktop"></i><span>Deposito</span></a>
+                        <a href="#"><i class="fas fa-desktop"></i><span>Kardex</span></a>
+                        <a href="#"><i class="fas fa-desktop"></i><span>Tipo de movimiento</span></a>
+                        <a href="#"><i class="fas fa-desktop"></i><span>Movimiento</span></a>
+                        <a href="#"><i class="fas fa-desktop"></i><span>Movimiento detalle</span></a>
+                    </div>
+                </li>
+
+                <li class="item">
+                    <a href="#" class="menu-btn"><i class="fas fa-chart-bar"></i><span>Dashboard</span></a>
+                </li>
+                <li class="item">
+                    <a href="#" class="menu-btn">
+                        <i class="fas fa-users"></i><span>Usuarios <i class="fas fa-chevron-down dropdown"></i></span>
+                    </a>
+                    <div class="submenu">
+                        <a href="#"><i class="fas fa-desktop"></i><span>Categoria</span></a>
+                        <a href="#"><i class="fas fa-desktop"></i><span>Marca</span></a>
+                    </div>
+                </li>
+                <li class="item">
+                    <a href="#" class="menu-btn"><i class="fas fa-cog"></i><span>Configuracion</span></a>
+                </li>
+            </div>
         </div>
+
     </div>
-
+    <!--
     <main class="content">
         <div class="Inicio" id="Beginning">
             <h1>Inicio</h1>
@@ -104,9 +112,11 @@
             <p>esto es Configuracion</p>
         </div>
 
-        <a href="index.html">volver</a>
+        
     </main>
+    -->
     
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="javascript/Main.js" type="module"></script>
     <script src="javascript/API.js" type="module"></script>
 </body>
