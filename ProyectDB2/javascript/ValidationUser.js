@@ -1,3 +1,5 @@
+
+/** 
 const NameUser = document.getElementById('NameUser');
 const email = document.getElementById('email');
 const Password = document.getElementById('Pass');
@@ -30,3 +32,4 @@ form.addEventListener("submit", e=>{
     }
 
 });
+*/

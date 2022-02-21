@@ -1,48 +1,28 @@
 {
   "Persona": [
     {
-      "Nombre": "Francisco",
-      "Apellidos": "Brizuela",
+      "Nombre": "Axel",
+      "NameUser": "",
+      "Password": "",
+      "Apellidos": "Lopez",
       "Email": "axellopezbrizuela3@gmail.com",
       "id": 1
     },
     {
-      "id": 2,
+      "Nombre": "Julio",
+      "NameUser": "",
+      "Password": "",
+      "Apellidos": "Perez",
+      "Email": "julioperez@gmail.com",
+      "id": 2
+    },
+    {
       "Nombre": "David",
       "Apellidos": "Moody",
-      "Email": "DavidElMujeriego@gmail.com",
-      "Contraseña": "qwerty1234"
-    },
-    {
-      "id": 3,
-      "Nombre": "Julio",
-      "Apellidos": "Perez",
-      "Email": "JulioCesar@gmail.com",
-      "Contraseña": "asdfg98765"
-    },
-    {
-      "Nombre": "Harvi",
-      "Apellidos": "Lopez",
-      "Email": "Harvilopez@gmail.com",
-      "id": 4
-    },
-    {
-      "Nombre": "Abdiel",
-      "Apellidos": "Lopez",
-      "Email": "abdiellopez@gmail.com",
-      "id": 5
-    },
-    {
-      "Nombre": "Evans",
-      "Apellidos": "Lopez",
-      "Email": "evanslopez@gmail.com",
-      "id": 7
-    },
-    {
-      "Nombre": "Axel",
-      "Apellidos": "Brizuela",
-      "Email": "axellopezbrizuela3@gmail.com",
-      "id": 8
+      "NameUser": "",
+      "Password": "",
+      "Email": "davidmoody@gmail.com",
+      "id": 3
     }
   ],
   "comments": [

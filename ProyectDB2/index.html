@@ -19,13 +19,13 @@
     <div id="particles-js"></div>
     <div class="container" id="container">
         <div class="form-container sing-up-container">
-            <form action="#" id="fromRegister">
+            <form action="#" id="fromRegister" class="FormUser">
                 <h1>Registrarme con email</h1>
                 
-                <input id="NameUser" type="text" placeholder="Nombre Usuario">
-                <input id="email" type="email" placeholder="email">
-                <input id="Pass" type="password" placeholder="Contraseña">
-                <button type="submit" class="Enviar_email" onclick="CodigoValid(), Log_User()">Enviar</button>
+                <input id="NameUser" name="NameUser" type="text" placeholder="Nombre Usuario" required>
+                <input id="email" name="email" type="email" placeholder="email" required>
+                <input id="Pass" name="Pass" type="password" placeholder="Contraseña" required>
+                <button type="submit" class="Enviar_email">Enviar</button>
                 <p class="warning" id="warning"></p>
                 <div id="Verificacion">
                     <input type="text" placeholder="Codigo de verificación">
