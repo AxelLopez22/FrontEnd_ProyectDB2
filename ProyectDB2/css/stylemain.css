@@ -136,7 +136,7 @@ body{
 }
 
 .wrapper .sidebar .sidebar-menu .item:hover .submenu{
-    max-height: 100%;
+    max-height: 1500px;
 }
 
 .wrapper .main-container{
@@ -144,7 +144,7 @@ body{
     margin-top: 70px;
     margin-left: 250px;
     padding: 15px;
-    background: #8fc5e9;
+    background: #fff;
     background-size: cover;
     height: 100vh;
     transition: 0.3s;
@@ -156,5 +156,23 @@ body{
 
 .wrapper.collapse .sidebar{
     width: 70px;
+}
 
+.wrapper.collapse a span{
+    display: none;
+}
+
+.wrapper.collapse .sidebar .sidebar-btn .item .menu-btn{
+    font-size: 13px;
+}
+
+.wrapper.collapse .main-container{
+    width: (100% - 70px);
+    margin-left: 70px;
+}
+
+.wrapper .Secciones .tableInv1{
+    width: 100%;
+    padding: 20px;
+    border-radius: 20px;
 }

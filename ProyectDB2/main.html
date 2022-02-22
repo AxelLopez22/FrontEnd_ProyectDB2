@@ -18,7 +18,7 @@
 
         <div class="header">
             <div class="header_menu">
-                <div class="title">Pokemones <span>Programando</span></div>
+                <div class="title">Name <span>Corporation</span></div>
                 <div class="sidebar-btn">
                     <i class="fas fa-bars"></i>
                 </div>
@@ -35,7 +35,7 @@
                         <i class="fas fa-boxes"></i><span>Inventario <i class="fas fa-chevron-down dropdown"></i></span>
                     </a>
                     <div class="submenu">
-                        <a href="#"><i class="fas fa-desktop"></i><span>Categoria</span></a>
+                        <a href="#Categoria"><i class="fas fa-desktop"></i><span>Categoria</span></a>
                         <a href="#"><i class="fas fa-desktop"></i><span>Marca</span></a>
                         <a href="#"><i class="fas fa-desktop"></i><span>Modelo</span></a>
                         <a href="#"><i class="fas fa-desktop"></i><span>Tipo de medida</span></a>
@@ -73,46 +73,119 @@
 
         <div class="main-container">
             <a href="index.html">Volver</a>
-            <div id="Fetch" class="CRUD">
-                <h2 class="Crud_tittle">Agregar Personas</h2>
-                <form class="formcrud">
-                    <input type="text" name="Nombre" placeholder="Nombre" required>
-                    <br>
-                    <input type="text" name="Apellido" placeholder="Apellido" required>
-                    <br>
-                    <input type="text" name="Correo" placeholder="Correo" required>
-                    <br>
-                    <input type="submit" value="enviar">
-                    <input type="hidden" name="id">
-                </form>
-            </div>
-            <article>
-                <h2>Ver Personas</h2>
-                <table class="CrudTable">
-                    <thead>
+            
+            
+
+            <div class="Secciones">
+                <div id="crudUser">
+                    <div id="Fetch" class="CRUD">
+                        <h2 class="Crud_tittle">Agregar Personas</h2>
+                        <form class="formcrud">
+                            <input type="text" name="Nombre" placeholder="Nombre" required>
+                            <br>
+                            <input type="text" name="Apellido" placeholder="Apellido" required>
+                            <br>
+                            <input type="text" name="Correo" placeholder="Correo" required>
+                            <br>
+                            <input type="submit" value="enviar">
+                            <input type="hidden" name="id">
+                        </form>
+                    </div>
+                    <article>
+                        <h2>Ver Personas</h2>
+                        <table class="CrudTable">
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Apellido</th>
+                                    <th>Correo</th>
+                                    <th>Accion</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                            </tbody>
+                        </table>
+                    </article>
+                    <template id="crud-template">
                         <tr>
-                            <th>Nombre</th>
-                            <th>Apellido</th>
-                            <th>Correo</th>
-                            <th>Accion</th>
+                            <td class="Nombre"></td>
+                            <td class="Apellido"></td>
+                            <td class="Email"></td>
+                            <td>
+                                <button class="Edit">Editar</button>
+                                <button class="Delete">Eliminar</button>
+                            </td>
                         </tr>
-                    </thead>
-                    <tbody>
-                        
-                    </tbody>
-                </table>
-            </article>
-            <template id="crud-template">
-                <tr>
-                    <td class="Nombre"></td>
-                    <td class="Apellido"></td>
-                    <td class="Email"></td>
-                    <td>
-                        <button class="Edit">Editar</button>
-                        <button class="Delete">Eliminar</button>
-                    </td>
-                </tr>
-            </template>
+                    </template>
+                </div>
+
+                <div id="Categoria">
+                    <table class="tableInv1">
+                        <thead>
+                            <tr>
+                                <th class="mdl-data-table__cell--non-numeric">Name</th>
+                                <th>Code</th>
+                                <th>Stock</th>
+                                <th>Price</th>
+                                <th>Options</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric">Product Name</td>
+                                <td>Product Code</td>
+                                <td>7</td>
+                                <td>$77</td>
+                                <td><button class="Edit">Editar</button><button class="Delete">Eliminar</button></td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric">Product Name</td>
+                                <td>Product Code</td>
+                                <td>7</td>
+                                <td>$77</td>
+                                <td><button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"><i class="zmdi zmdi-more"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric">Product Name</td>
+                                <td>Product Code</td>
+                                <td>7</td>
+                                <td>$77</td>
+                                <td><button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"><i class="zmdi zmdi-more"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric">Product Name</td>
+                                <td>Product Code</td>
+                                <td>7</td>
+                                <td>$77</td>
+                                <td><button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"><i class="zmdi zmdi-more"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric">Product Name</td>
+                                <td>Product Code</td>
+                                <td>7</td>
+                                <td>$77</td>
+                                <td><button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"><i class="zmdi zmdi-more"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric">Product Name</td>
+                                <td>Product Code</td>
+                                <td>7</td>
+                                <td>$77</td>
+                                <td><button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"><i class="zmdi zmdi-more"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric">Product Name</td>
+                                <td>Product Code</td>
+                                <td>7</td>
+                                <td>$77</td>
+                                <td><button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"><i class="zmdi zmdi-more"></i></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
         
         </div>
     </div>
@@ -166,7 +239,7 @@
     -->
     <script type="text/javascript">
         $(document).ready(function(){
-            $("sidebar-btn").click(function(){
+            $(".sidebar-btn").click(function(){
                 $(".wrapper").toggleClass("collapse");
             });
         });
