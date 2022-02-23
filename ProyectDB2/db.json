@@ -1,4 +1,27 @@
 {
+  "Categoria":[
+    {
+      "id":1,
+      "NombreProducto":"Samsung A20",
+      "Categoria":"Telefono",
+      "Stock":5,
+      "Precio":5000
+    },
+    {
+      "id":2,
+      "NombreProducto":"Samsung A50",
+      "Categoria":"Telefono",
+      "Stock":8,
+      "Precio":8000
+    },
+    {
+      "id":3,
+      "NombreProducto":"Huawei P30",
+      "Categoria":"Telefono",
+      "Stock":2,
+      "Precio":9000
+    }
+  ],
   "Persona": [
     {
       "Nombre": "Axel",

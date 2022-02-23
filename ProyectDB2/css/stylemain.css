@@ -130,6 +130,10 @@ body{
 
 }
 
+.active{
+    background: #55b1f0;
+}
+
 .wrapper .sidebar .sidebar-menu .item .submenu i{
     padding-right: 20px;
     font-size: 10px;
@@ -175,4 +179,34 @@ body{
     width: 100%;
     padding: 20px;
     border-radius: 20px;
+}
+
+.wrapper.Secciones article .CrudTable{
+    width: 100%;
+    padding: 20%;
+
+}
+
+.wrapper .Secciones .Categoria form{
+    width: 100%;
+    display: flex;
+    margin: 10px;
+}
+
+.wrapper .Secciones .Categoria form input{
+    width: 18%;
+    height: 30px;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid darkgray;
+}
+
+.wrapper .Secciones .Categoria form input.Enviar{
+    align-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 5px;
 }

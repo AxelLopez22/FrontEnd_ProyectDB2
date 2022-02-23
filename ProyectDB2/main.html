@@ -9,7 +9,6 @@
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" charset="utf-8"></script>
-    
 </head>
 <body>
     
@@ -28,7 +27,7 @@
         <div class="sidebar">
             <div class="sidebar-menu">
                 <li class="item">
-                    <a href="#" class="menu-btn"><i class="fas fa-home"></i><span>Inicio</span></a>
+                    <a href="#Inicio" class="menu-btn"><i class="fas fa-home"></i><span>Inicio</span></a>
                 </li>
                 <li class="item">
                     <a href="#" class="menu-btn">
@@ -57,13 +56,14 @@
                     <a href="#" class="menu-btn"><i class="fas fa-chart-bar"></i><span>Dashboard</span></a>
                 </li>
                 <li class="item">
-                    <a href="#" class="menu-btn">
-                        <i class="fas fa-users"></i><span>Usuarios <i class="fas fa-chevron-down dropdown"></i></span>
+                    <a href="#crudUser" class="menu-btn">
+                        <i class="fas fa-users"></i><span>Usuarios</i></span>
                     </a>
+                    <!--
                     <div class="submenu">
                         <a href="#"><i class="fas fa-desktop"></i><span>Categoria</span></a>
                         <a href="#"><i class="fas fa-desktop"></i><span>Marca</span></a>
-                    </div>
+                    </div>-->
                 </li>
                 <li class="item">
                     <a href="#" class="menu-btn"><i class="fas fa-cog"></i><span>Configuracion</span></a>
@@ -71,12 +71,12 @@
             </div>
         </div>
 
-        <div class="main-container">
-            <a href="index.html">Volver</a>
-            
-            
-
+        <div class="main-container">            
+    
             <div class="Secciones">
+                <div id="Inicio">
+                    <h2>Esto es inicio</h2>
+                </div>
                 <div id="crudUser">
                     <div id="Fetch" class="CRUD">
                         <h2 class="Crud_tittle">Agregar Personas</h2>
@@ -120,18 +120,35 @@
                     </template>
                 </div>
 
-                <div id="Categoria">
+                <div id="Categoria" class="Categoria">
+                    <h2>Categoria</h2>
+                    <hr>
+                    <form action="" id="FormCategoria" class="FrmCat">
+                        <input type="text" name="Nombre" placeholder="Nombre producto" required>
+                        <br>
+                        <input type="text" name="Categoria" placeholder="Categoria" required>
+                        <br>
+                        <input type="text" name="Stock" placeholder="Stock" required>
+                        <br>
+                        <input type="text" name="Precio" placeholder="Precio" required>
+                        <br>
+                        <input type="submit" class="Enviar" value="enviar">
+                        <input type="hidden" name="id">
+                    </form>
+                    <br>
+                    <hr>
                     <table class="tableInv1">
                         <thead>
                             <tr>
-                                <th class="mdl-data-table__cell--non-numeric">Name</th>
-                                <th>Code</th>
+                                <th>Nombre producto</th>
+                                <th>Categoria</th>
                                 <th>Stock</th>
                                 <th>Price</th>
                                 <th>Options</th>
                             </tr>
                         </thead>
                         <tbody>
+                            <!--
                             <tr>
                                 <td class="mdl-data-table__cell--non-numeric">Product Name</td>
                                 <td>Product Code</td>
@@ -180,13 +197,25 @@
                                 <td>7</td>
                                 <td>$77</td>
                                 <td><button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"><i class="zmdi zmdi-more"></i></button></td>
-                            </tr>
+                            </tr>-->
                         </tbody>
                     </table>
+                    <template id="ListCategory">
+                        <tr>
+                            <td class="NombreProducto"></td>
+                            <td class="Categoria"></td>
+                            <td class="Stock"></td>
+                            <td class="Precio"></td>
+                            <td>
+                                <button class="Mod">Editar</button>
+                                <button class="Del">Eliminar</button>
+                            </td>
+                        </tr>
+                    </template>
                 </div>
-
+                <a href="index.html">Volver</a>
             </div>
-        
+            
         </div>
     </div>
 
@@ -245,6 +274,7 @@
         });
     </script>
 
+    <script src="javascript/Categorias.js" type="module"></script>
     <script src="javascript/Main.js" type="text/javascript"></script>
     <script src="javascript/API.js" type="module"></script>
 </body>
