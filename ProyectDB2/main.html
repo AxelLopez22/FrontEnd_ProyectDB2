@@ -125,27 +125,35 @@
                     <h2>Categorias</h2>
                     <hr>
                     <form id="FormCategoria" class="FrmCat" onsubmit="return false">
-                        <input type="text" name="Nombre" placeholder="Nombre producto" required>
+                        <input type="text" name="Nombre" placeholder="Nombre" required>
                         <br>
-                        <input type="text" name="Categoria" placeholder="Categoria" required>
+                        <select name="select" id="OptionSelect">
+                            <option value="true">Categoria</option>
+                            <option value="false">SubCategoria</option>
+                        </select>
                         <br>
-                        <input type="text" name="Stock" placeholder="Stock" required>
-                        <br>
-                        <input type="text" name="Precio" placeholder="Precio" required>
+                        <select name="selectCat" id="OptionCategory">
+                    
+                            <!--
+                            <option value="">Categoria 1</option>
+                            <option value="">Categoria 2</option>
+                            <option value="">Categoria 3</option>
+                            <option value="">Categoria 4</option-->
+                        </select>
                         <br>
                         <input type="submit" class="Enviar" value="enviar">
                         <input type="hidden" name="id">
                     </form>
                     <br>
                     <hr>
+                    <br>
                     <table class="tableInv1">
                         <thead>
                             <tr>
-                                <th scope="col">Nombre producto</th>
                                 <th scope="col">Categoria</th>
-                                <th scope="col">Stock</th>
-                                <th scope="col">Price</th>
-                                <th scope="col">Options</th>
+                                <th scope="col">Categoria padre</th>
+                                <th scope="col">SubCategoria</th>
+                                <th scope="col">Opciones</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -203,10 +211,9 @@
                     </table>
                     <template id="ListCategory" class="ListCategory">
                         <tr>
-                            <td class="NombreProducto"></td>
+                            <td class="Nombre"></td>
                             <td class="Categoria" align="center"></td>
-                            <td class="Stock" align="center"></td>
-                            <td class="Precio" align="center"></td>
+                            <td class="CategoriaPadre" align="center"></td>
                             <td align="center">
                                 <button class="Mod">Editar</button>
                                 <button class="Del">Eliminar</button>

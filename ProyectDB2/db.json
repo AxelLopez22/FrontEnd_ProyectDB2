@@ -1,18 +1,45 @@
 {
   "Categoria": [
     {
-      "NombreProducto": "Samsung A10",
-      "Categoria": "Telefono",
-      "Stock": "5",
-      "Precio": "2000",
+      "StrCategory": "Categoria 1",
+      "BitSubcategory": "false",
+      "UniqIdcategoryfather": "null",
       "id": 1
     },
     {
-      "NombreProducto": "Samsung A20",
-      "Categoria": "Telefono",
-      "Stock": "5",
-      "Precio": "2000",
+      "StrCategory": "Categoria A",
+      "BitSubcategory": "true",
+      "UniqIdcategoryfather": "",
+      "BitStatus": true,
       "id": 2
+    },
+    {
+      "StrCategory": "SubCategoria A",
+      "BitSubcategory": "false",
+      "UniqIdcategoryfather": "2",
+      "BitStatus": true,
+      "id": 3
+    },
+    {
+      "StrCategory": "Categoria B",
+      "BitSubcategory": "true",
+      "UniqIdcategoryfather": "",
+      "BitStatus": true,
+      "id": 4
+    },
+    {
+      "StrCategory": "SubCategoria B",
+      "BitSubcategory": "false",
+      "UniqIdcategoryfather": "4",
+      "BitStatus": true,
+      "id": 5
+    },
+    {
+      "StrCategory": "SubCategoria B2",
+      "BitSubcategory": "false",
+      "UniqIdcategoryfather": "4",
+      "BitStatus": true,
+      "id": 6
     }
   ],
   "Persona": [

@@ -4,6 +4,10 @@ $table = d.querySelector(".tableInv1"),
 $templateInv = d.getElementById("ListCategory").content,
 $fragmentInv = d.createDocumentFragment();
 
+$(document).ready(function(){
+
+});
+
 const GetProd = async () => {
     try {
         let res = await fetch('http://localhost:5555/Categoria'),
@@ -12,15 +16,13 @@ const GetProd = async () => {
         if(!res.ok) throw {status:res.status,statusText:res.statusText}
         console.log(json);
         json.forEach(el => {
-            $templateInv.querySelector(".NombreProducto").textContent = el.NombreProducto;
-            $templateInv.querySelector(".Categoria").textContent = el.Categoria;
-            $templateInv.querySelector(".Stock").textContent = el.Stock;
-            $templateInv.querySelector(".Precio").textContent = el.Precio;
+            $templateInv.querySelector(".Nombre").textContent = el.StrCategory;
+            $templateInv.querySelector(".Categoria").textContent = el.UniqIdcategoryfather;
+            $templateInv.querySelector(".CategoriaPadre").textContent = el.BitSubcategory;
             $templateInv.querySelector(".Mod").dataset.id = el.id;
-            $templateInv.querySelector(".Mod").dataset.NombreProducto = el.NombreProducto;
-            $templateInv.querySelector(".Mod").dataset.Categoria = el.Categoria;
-            $templateInv.querySelector(".Mod").dataset.Stock = el.Stock;
-            $templateInv.querySelector(".Mod").dataset.Precio = el.Precio;
+            $templateInv.querySelector(".Mod").dataset.Nombre = el.StrCategory;
+            $templateInv.querySelector(".Mod").dataset.select = el.BitSubcategory;
+            $templateInv.querySelector(".Mod").dataset.selectCat = el.UniqIdcategoryfather;
             $templateInv.querySelector(".Del").dataset.id = el.id;
             
             let $cloneInv = d.importNode($templateInv, true);
@@ -51,14 +53,16 @@ d.addEventListener("submit",async e => {
                         "Content-type":"application/json; charset=utf-8"
                     },
                     body: JSON.stringify({
-                        NombreProducto:e.target.Nombre.value,
-                        Categoria:e.target.Categoria.value,
-                        Stock:e.target.Stock.value,
-                        Precio:e.target.Precio.value
+                        StrCategory:e.target.Nombre.value,
+                        BitSubcategory:e.target.select.value,
+                        UniqIdcategoryfather:e.target.selectCat.value,
+                        BitStatus:true
                     })
                 },
                 res = await fetch('http://localhost:5555/Categoria',options);
                 json = await res.json();
+
+                console.log(JSON);
 
                 if(!res.ok) throw {status:res.status,statusText:res.statusText}
                 location.reload();
@@ -75,10 +79,10 @@ d.addEventListener("submit",async e => {
                         "Content-type":"application/json; charset=utf-8"
                     },
                     body: JSON.stringify({
-                        NombreProducto:e.target.Nombre.value,
-                        Categoria:e.target.Categoria.value,
-                        Stock:e.target.Stock.value,
-                        Precio:e.target.Precio.value
+                        StrCategory:e.target.Nombre.value,
+                        BitSubcategory:e.target.select.value,
+                        UniqIdcategoryfather:e.target.selectCat.value,
+                        BitStatus:true
                     })
                 },
                 res = await fetch(`http://localhost:5555/Categoria/${e.target.id.value}`,options);
@@ -98,15 +102,13 @@ d.addEventListener("submit",async e => {
 
 
 d.addEventListener("click", async e => {
+    e.preventDefault();
     if(e.target.matches(".Mod")){
-        $form.Nombre.value = e.target.dataset.NombreProducto;
-        $form.Categoria.value = e.target.dataset.Categoria;
-        $form.Stock.value = e.target.dataset.Stock;
-        $form.Precio.value = e.target.dataset.Precio;
+        $form.Nombre.value = e.target.dataset.StrCategory;
+        $form.select.value = e.target.dataset.BitSubcategory;
+        $form.selectCat.value = e.target.dataset.UniqIdcategoryfather;
         $form.id.value = e.target.dataset.id;
     }
-
-    console.log(e.target.dataset.Precio);
 
     if(e.target.matches(".Del")){
         let isDelete = confirm(`¿Quieres eliminar el id? ${e.target.dataset.id}`)
@@ -134,4 +136,30 @@ d.addEventListener("click", async e => {
     }
 });
 
+
+const $OptionSelect = document.getElementById("OptionSelect"),
+ $OptionCategory = document.getElementById("OptionCategory");
+
+ 
+ function SelectOpc(){
+
+ }
+ function LoadCategory(value){
+    
+        fetch("http://localhost:5555/Categoria")
+        .then(res => res.ok ? res.json():Promise.reject(res))
+        .then(json => {
+            console.log(json);
+            let $option = `<option value="">Elige a que categoria pertenece</option>`;
+
+            json.forEach(el => $option += `<option value="${el.id}">${el.StrCategory}</option>`);
+            $OptionCategory.innerHTML = $option;
+        })
+        .catch(err => {
+            console.log(err);
+        })
+ }
+
+ document.addEventListener("DOMContentLoaded",LoadCategory);
+// $OptionSelect.addEventListener("change", e => LoadCategory(e.target.value));
 //
