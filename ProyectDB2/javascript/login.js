@@ -8,7 +8,6 @@ const d = document,
 const $formulario = d.getElementById("fromRegister");
 
 $formulario.addEventListener("submit", async e => {
-        e.preventDefault();
         const User = document.getElementById('NameUser').value;
         const email = document.getElementById('email').value;
         const password = document.getElementById('Pass').value;

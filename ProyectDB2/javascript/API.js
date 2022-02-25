@@ -2,7 +2,7 @@
 //METODO GET ALL
 const d = document,
     $table = d.querySelector(".CrudTable"),
-    $form = d.querySelector(".formcrud"),
+    $formU = d.querySelector(".formcrud"),
     $tittle = d.querySelector(".Crud_tittle"),
     $template = d.getElementById("crud-template").content,
     $fragment = document.createDocumentFragment();
@@ -39,8 +39,9 @@ d.addEventListener("DOMContentLoaded", GetAll);
 
 
 //CRUD
+
 d.addEventListener("submit",async e => {
-    if(e.target === $form){
+    if(e.target === $formU){
         e.preventDefault();
         if(!e.target.id.value){
             //CreatePOST
@@ -63,7 +64,7 @@ d.addEventListener("submit",async e => {
                 location.reload();
             } catch (error) {
                 let message = error.statusText || "Ocurrio un error"
-                $form.insertAdjacentHTML("afterend",`<p><b>Error ${error.status}: ${message}</b></p>`)
+                $formU.insertAdjacentHTML("afterend",`<p><b>Error ${error.status}: ${message}</b></p>`)
             }
             
         } else {
@@ -88,7 +89,7 @@ d.addEventListener("submit",async e => {
                 location.reload();
             } catch (error) {
                 let message = error.statusText || "Ocurrio un error"
-                $form.insertAdjacentHTML("afterend",`<p><b>Error ${error.status}: ${message}</b></p>`)
+                $formU.insertAdjacentHTML("afterend",`<p><b>Error ${error.status}: ${message}</b></p>`)
             }
         }
     }
@@ -97,10 +98,10 @@ d.addEventListener("submit",async e => {
 d.addEventListener("click",async e => {
     if(e.target.matches('.Edit')){
         $tittle.textContent = 'Editar Persona';
-        $form.Nombre.value = e.target.dataset.Nombre;
-        $form.Apellido.value = e.target.dataset.Apellido;
-        $form.Correo.value = e.target.dataset.Email;
-        $form.id.value = e.target.dataset.id;
+        $formU.Nombre.value = e.target.dataset.Nombre;
+        $formU.Apellido.value = e.target.dataset.Apellido;
+        $formU.Correo.value = e.target.dataset.Email;
+        $formU.id.value = e.target.dataset.id;
         //console.log(e.target.dataset.Nombre);
     }
 

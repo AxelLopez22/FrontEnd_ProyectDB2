@@ -202,6 +202,14 @@ body{
     border: 1px solid darkgray;
 }
 
+.wrapper .Secciones .Categoria form select{
+    width: 18%;
+    height: 30px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid darkgray;
+}
+
 .wrapper .Secciones .Categoria form input.Enviar{
     align-content: center;
     font-size: 12px;
@@ -209,4 +217,25 @@ body{
     letter-spacing: 1px;
     text-transform: uppercase;
     border-radius: 5px;
+    align-items: right;
+}
+
+.wrapper .Secciones .Categoria .tableInv1{
+    font-size: 17px;
+    letter-spacing: 1px;
+    border: #b2b2b2 1px solid;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.wrapper .Secciones .Categoria th{
+    border: #b2b2b2 1px solid;
+}
+
+.wrapper .Secciones .Categoria td::content{
+    height: 30px;
+
 }

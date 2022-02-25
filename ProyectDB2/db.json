@@ -1,25 +1,18 @@
 {
-  "Categoria":[
+  "Categoria": [
     {
-      "id":1,
-      "NombreProducto":"Samsung A20",
-      "Categoria":"Telefono",
-      "Stock":5,
-      "Precio":5000
+      "NombreProducto": "Samsung A10",
+      "Categoria": "Telefono",
+      "Stock": "5",
+      "Precio": "2000",
+      "id": 1
     },
     {
-      "id":2,
-      "NombreProducto":"Samsung A50",
-      "Categoria":"Telefono",
-      "Stock":8,
-      "Precio":8000
-    },
-    {
-      "id":3,
-      "NombreProducto":"Huawei P30",
-      "Categoria":"Telefono",
-      "Stock":2,
-      "Precio":9000
+      "NombreProducto": "Samsung A20",
+      "Categoria": "Telefono",
+      "Stock": "5",
+      "Precio": "2000",
+      "id": 2
     }
   ],
   "Persona": [
@@ -46,6 +39,36 @@
       "Password": "",
       "Email": "davidmoody@gmail.com",
       "id": 3
+    },
+    {
+      "NameUser": "AxelLopez22",
+      "Email": "axellopezbrizuela3@gmail.com",
+      "Password": "AxelLopez12345",
+      "id": 4
+    },
+    {
+      "NameUser": "Axel",
+      "Email": "axellopez@gmail.com",
+      "Password": "Axel131099",
+      "id": 5
+    },
+    {
+      "NameUser": "",
+      "Email": "",
+      "Password": "",
+      "id": 6
+    },
+    {
+      "NameUser": "",
+      "Email": "",
+      "Password": "",
+      "id": 7
+    },
+    {
+      "NameUser": "DavidMoody",
+      "Email": "DavidMoody@gmail.com",
+      "Password": "123456789",
+      "id": 8
     }
   ],
   "comments": [

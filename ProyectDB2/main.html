@@ -78,6 +78,7 @@
                     <h2>Esto es inicio</h2>
                 </div>
                 <div id="crudUser">
+                    <!---->
                     <div id="Fetch" class="CRUD">
                         <h2 class="Crud_tittle">Agregar Personas</h2>
                         <form class="formcrud">
@@ -121,9 +122,9 @@
                 </div>
 
                 <div id="Categoria" class="Categoria">
-                    <h2>Categoria</h2>
+                    <h2>Categorias</h2>
                     <hr>
-                    <form action="" id="FormCategoria" class="FrmCat">
+                    <form id="FormCategoria" class="FrmCat" onsubmit="return false">
                         <input type="text" name="Nombre" placeholder="Nombre producto" required>
                         <br>
                         <input type="text" name="Categoria" placeholder="Categoria" required>
@@ -140,11 +141,11 @@
                     <table class="tableInv1">
                         <thead>
                             <tr>
-                                <th>Nombre producto</th>
-                                <th>Categoria</th>
-                                <th>Stock</th>
-                                <th>Price</th>
-                                <th>Options</th>
+                                <th scope="col">Nombre producto</th>
+                                <th scope="col">Categoria</th>
+                                <th scope="col">Stock</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Options</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -200,13 +201,13 @@
                             </tr>-->
                         </tbody>
                     </table>
-                    <template id="ListCategory">
+                    <template id="ListCategory" class="ListCategory">
                         <tr>
                             <td class="NombreProducto"></td>
-                            <td class="Categoria"></td>
-                            <td class="Stock"></td>
-                            <td class="Precio"></td>
-                            <td>
+                            <td class="Categoria" align="center"></td>
+                            <td class="Stock" align="center"></td>
+                            <td class="Precio" align="center"></td>
+                            <td align="center">
                                 <button class="Mod">Editar</button>
                                 <button class="Del">Eliminar</button>
                             </td>
